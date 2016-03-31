@@ -7,6 +7,7 @@ PeerNet is a simple application built using socket programming in c which is cap
 - All commands starting with `r` are remote commands, which either run on the other peer or display details about the peer.  
 - The port for server thread will be choosen at random from the available/accessible ports.
 - The convention followed in the comments is that, the 'client' is actually the other peer to whom one is connected. For a person, the other peer is like a client.
+- The default shared directory is `shared_dir_GRIM`, which needs to be present alongside the SERVER executable.
 
 The given app can be used both as a `Server VS Client` application or a normal `P2P` app.
 The details on how to configure are below.
@@ -44,17 +45,17 @@ This is the Server code. Run using `./SERVER`. Actually, it is the peer code whi
 ● $> `filehash checkall` - Get the hash of all the files in the shared directory with their date modified.  
 ● $> `clear`  - Clear the contents of the screen  
 ● $> `ls`    - Run <b>ls</b> on the same pc's shared directory  
-● $> `getfile tcp/udp <filename>`  
 ● $> `hash` - Prints the hash of the text given in the input.  
 
 
 #### Remote Commands
 - The remote commands will work only when the application runs as P2P app.  
 
+● $> `getfile tcp/udp <filename>` - Get the file with the given filename from the remote peer.  
 ● $> `rfind regex './sha.*'`  -  Find all the files in the shared directory of the remote peer that match a particuler regex. (NOTE: The regex must begin with `./`)  
-● $> `rfind longlist` - Get a list of all the files in the shared directory with thier filesize(in bytes), filetype, and last modified date.  
+● $> `rfind longlist` - Get a list of all the files in the shared directory with thier filesize(in bytes), filetype, and last modified dates.  
 ● $> `rfind shortlist TIMESTAMP TIMESTAMP`  // Segfault if timestamp not given  
-● $> `rls`   <-- Remote ls on remote peer's shared directory  
+● $> `rls` - Remote ls on remote peer's shared directory  
 
 
 ## SampleExecutable
