@@ -1,0 +1,6 @@
+#!/bin/bash
+var1=$(cat ~/codes/template/sh.sh | grep -B 100 '# START' | wc -l)
+echo "$var1 + 1" | bc
+#!/bin/bash
+var1=$(cat ~/codes/template/sh.sh | grep -B 100 '# START' | wc -l)
+echo "$var1 + 1" | bc
