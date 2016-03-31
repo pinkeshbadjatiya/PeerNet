@@ -60,3 +60,8 @@ This is the Server code. Run using `./SERVER`. Actually, it is the peer code whi
 ## SampleExecutable
 
 The `bin` directory contains a simple structure of a P2P setup with 2 peers, **Peer1** and **Peer2**. Each of them have a shared directory named, `shared_dir_GRIM`. Each of them have a executable named `SERVER` which can be used to create a connection between each other.
+
+## Licence
+**GNU GENERAL PUBLIC LICENSE**  
+Version 3, 29 June 2007  
+The GNU General Public License is a free, copyleft license for software and other kinds of works.
