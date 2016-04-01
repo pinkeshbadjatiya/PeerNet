@@ -49,8 +49,7 @@ This is the Server code. Run using `./SERVER`. Actually, it is the peer code whi
 
 
 #### Remote Commands
-- The remote commands will work only when the application runs as P2P app.  
-
+- To run these commands, both the peers ust be connected over a network.  
 ● $> `getfile tcp/udp <filename>` - Get the file with the given filename from the remote peer. You can choose between the two protocols, i.e. `TCP` or `UDP`.
 ● $> `rfind regex './sha.*'`  -  Find all the files in the shared directory of the remote peer that match a particuler regex. (NOTE: The regex must begin with `./`)  
 ● $> `rfind longlist` - Get a list of all the files in the shared directory with thier filesize(in bytes), filetype, and last modified dates.  
