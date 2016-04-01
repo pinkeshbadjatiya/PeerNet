@@ -23,12 +23,12 @@ Common commands -
 
 - Now, **CLIENT** is the Client code.  Run it using the command `./CLIENT <SERVER_IP> <SERVER_PORT>` and you should be able to access the remote directory of the server.  
 ![Client](http://i.imgur.com/p1J1pNf.png)  
-while the server would display the stats of connections. 
+while the server would display the stats of connections.
 ![Server](http://i.imgur.com/fZOGPiT.png)
 
 ### P2P
 - **SERVER**  
-This is the Server code. Run using `./SERVER`. Actually, it is the peer code which runs on all the devices. Just due to naming convention i call it server. Run it to start the server + client daemon on a peer. You would get the port no as displayed on the screen. Note the peer's IP and the port as displayed on screen. Let us call this peer1 for the sake on convenience.  
+This is the Server code. Run using `./SERVER`. Actually, it is the peer code which runs on all the devices. Just due to naming convention i call it server. Run it to start the server + client daemon on a peer. Note the peer's IP and the port as displayed on screen. Let us call this peer1 for the sake on convenience.  
 ![Peer1](http://i.imgur.com/oct8aJB.png)
 
 - Now, again run **SERVER**, but this time using this command, `./SERVER <PEER1_IP> <PEER1_PORT>`. The client or Peer2 will connect to Peer1, followed by Peer1 connecting to Peer2. This would create a bi-directional communication stream.  
