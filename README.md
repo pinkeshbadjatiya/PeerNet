@@ -5,7 +5,7 @@ PeerNet is a simple application built using socket programming in c which is cap
 
 ## INSTRUCTIONS:
 - All commands starting with `r` are remote commands, which either run on the other peer or display details about the peer.  
-- The port for server thread will be choosen at random from the available/accessible ports.
+- The port for server thread will be chosen at random from the available/accessible ports.
 - The convention followed in the comments is that, the 'client' is actually the other peer to whom one is connected. For a person, the other peer is like a client.
 - The default shared directory is `shared_dir_GRIM`, which needs to be present alongside the SERVER executable.
 
@@ -13,7 +13,7 @@ The given app can be used both as a `Server VS Client` application or a normal `
 The details on how to configure are below.
 
 Common commands -
-- run `make withoutWarnings` to get the executables. (This just supresses all the warnings. You can also run `make all` to see the warnings.)
+- run `make withoutWarnings` to get the executables. (This just suppresses all the warnings. You can also run `make all` to see the warnings.)
 - There would be two of them, namely, `SERVER` and `CLIENT`
 
 
@@ -50,10 +50,10 @@ This is the Server code. Run using `./SERVER`. Actually, it is the peer code whi
 
 
 #### Remote Commands
-- To run these commands, both the peers ust be connected over a network.  
+- To run these commands, both the peers must be connected over a network.  
 ● $> `getfile tcp/udp <filename>` - Get the file with the given filename from the remote peer. You can choose between the two protocols, i.e. `TCP` or `UDP`.  
-● $> `rfind regex './sha.*'`  -  Find all the files in the shared directory of the remote peer that match a particuler regex. (NOTE: The regex must begin with `./`)  
-● $> `rfind longlist` - Get a list of all the files in the shared directory with thier filesize(in bytes), filetype, and last modified dates.  
+● $> `rfind regex './sha.*'`  -  Find all the files in the shared directory of the remote peer that match a particular regex. (NOTE: The regex must begin with `./`)  
+● $> `rfind longlist` - Get a list of all the files in the shared directory with their filesize(in bytes), file type, and last modified dates.  
 ● $> `rfind shortlist TIMESTAMP TIMESTAMP`  // Segfault if timestamp not given  
 ● $> `rls` - Remote ls on remote peer's shared directory  
 
@@ -61,6 +61,12 @@ This is the Server code. Run using `./SERVER`. Actually, it is the peer code whi
 ## SampleExecutable
 
 The `bin` directory contains a simple structure of a P2P setup with 2 peers, **Peer1** and **Peer2**. Each of them have a shared directory named, `shared_dir_GRIM`. Each of them have a executable named `SERVER` which can be used to create a connection between each other.
+
+## TODO
+- Resolve warnings in Makefile
+- Find issue in `rfind shortlist TIMESTAMP TIMESTAMP` and resolve
+- Create a sync wrapper that sync's the complete directory using the existing function calls.
+- Separate `all_headers.h` into meaningful files, separate header and `.c` files
 
 ## Licence
 **GNU GENERAL PUBLIC LICENSE**  
