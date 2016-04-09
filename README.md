@@ -1,6 +1,8 @@
 # PeerNet
 A P2P file-sharing application written using socket programming in c.
 
+[![Build Status](https://travis-ci.org/pinkeshbadjatiya/PeerNet.svg?branch=master)](https://travis-ci.org/pinkeshbadjatiya/PeerNet)
+
 PeerNet is a simple application built using socket programming in c which is capable of transferring files over TCP/UDP with SHA256 hash verification. One can also list the contents of the remote directory and get the hash of all files and compare it with his directory to sync across both the peers.
 
 ## INSTRUCTIONS:
